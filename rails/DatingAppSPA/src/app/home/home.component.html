@@ -1,0 +1,16 @@
+<div class="jumbotron">
+    <div class="container">
+        <div *ngIf="!isRegister" class=" row justify-content-center">
+            <div class="col-4">
+                <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+                <p><a class="btn btn-primary btn-lg" href="#" (click)="registerToggle()" role="button">Register»</a></p>
+                <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-4" *ngIf="isRegister">
+                <app-resgiter [valueFormHome]="values" (cancelRegister)="cancelRegisterMode($event)"></app-resgiter>
+            </div>
+        </div>
+    </div>
+</div>
